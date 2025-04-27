@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Objects">
+      <UniqueIdentifier>{2e94c70f-9d06-445e-b759-04ea86d207c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Basic">
+      <UniqueIdentifier>{595c9e47-04fa-49ad-aa36-e0f596404363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Basic">
+      <UniqueIdentifier>{612cf98a-046a-4e82-ad1d-dd87c6880c98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Music">
+      <UniqueIdentifier>{be57b2e1-a9c6-4aa2-b1fa-3cf451ca57ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{7fc99eee-c14f-4d92-b2ba-0ebc6e5f18e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Music">
+      <UniqueIdentifier>{ef037f72-dfb6-4e1c-9443-d6abe58574fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pong.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Source Files\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryOfFront.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryOfRect.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Sounds.cpp">
+      <Filter>Source Files\Music</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionsWithRectangle.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Loger.cpp">
+      <Filter>Source Files\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Handler.cpp">
+      <Filter>Source Files\Basic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h">
+      <Filter>Header Files\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sounds.h">
+      <Filter>Header Files\Music</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryOfRect.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryOfFront.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionsWithRectangle.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Loger.h">
+      <Filter>Header Files\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Handler.h">
+      <Filter>Header Files\Basic</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
