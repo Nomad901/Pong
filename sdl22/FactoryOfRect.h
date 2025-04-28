@@ -26,6 +26,11 @@ public:
 	void render(SDL_Renderer* pRenderer) const {
 		SDL_RenderCopy(pRenderer, m_texture, NULL, &m_rect);
 	}
+	void renderOnlyEdges(SDL_Renderer* pRenderer, uint8_t pR, uint8_t pG, uint8_t pB, uint8_t pA)
+	{
+		SDL_SetRenderDrawColor(pRenderer, pR, pG, pB, pA);
+		SDL_RenderDrawRect(pRenderer, &m_rect);
+	}
 
 	inline SDL_Rect getRect()  const { return m_rect; }
 	inline int GetPositionX()  const { return m_PosX; }

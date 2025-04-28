@@ -4,6 +4,7 @@
 #include <functional>
 #include <vector>
 #include <unordered_map>
+#include <filesystem>
 
 #include <SDL.h>
 #include <SDL_image.h>
@@ -34,13 +35,14 @@ public:
 	void startLoop();
 	void stopLoop();
 	
-	inline int getMousePosX() const          { return m_mouseX;    }
-	inline int getMousePosY() const          { return m_mouseY;    }
-	inline int getWindowsWidth() const       { return m_windowW;   }
-	inline int getWindowsHeight() const      { return m_windowH;   }
-	inline SDL_Window* getWindow() const     { return m_window;    }
-	inline SDL_Renderer* getRenderer() const { return m_renderer;  }
-	inline SDL_bool loopIsRunning() const    { return m_isRunning; }
+	std::filesystem::path getPath() const	 { return std::filesystem::current_path();  }
+	inline int getMousePosX() const          { return m_mouseX;							}
+	inline int getMousePosY() const          { return m_mouseY;							}
+	inline int getWindowsWidth() const       { return m_windowW;						}
+	inline int getWindowsHeight() const      { return m_windowH;						}
+	inline SDL_Window* getWindow() const     { return m_window;							}
+	inline SDL_Renderer* getRenderer() const { return m_renderer;						}
+	inline SDL_bool loopIsRunning() const    { return m_isRunning;						}
 	
 private:
 	SDL_Renderer* m_renderer;

@@ -7,7 +7,7 @@ SDL_bool ActionsWithRectangle::isColliding(SDL_Rect pFromRect, SDL_Rect pToRect)
 
 void ActionsWithRectangle::movingCircle(SDL_Renderer* pRenderer, FactoryOfRect& pCircle,
 										FactoryOfRect& pGameZone, bool& movingUp, bool& movingRight, 
-										bool& isPlaying, int& pSpeedOfBall)
+										bool& isPlaying, int& pSpeedOfBall, bool glow)
 {
 	const int radius = 20;
 	const int speed = pSpeedOfBall;
@@ -34,8 +34,10 @@ void ActionsWithRectangle::movingCircle(SDL_Renderer* pRenderer, FactoryOfRect& 
 	}
 
 	pCircle.setPosition(m_posX, m_posY);
-	circleRGBA(pRenderer, m_posX, m_posY, radius+5, 255, 255, 255, 255);
-	
+	if (!glow)
+		circleRGBA(pRenderer, m_posX, m_posY, radius + 5, 255, 255, 255, 255);
+	else
+		filledCircleRGBA(pRenderer, m_posX, m_posY, radius + 5, 255, 255, 255, 255);
 	if (m_posY <= 0) movingUp = false;
 	if (m_posY >= pGameZone.GetDimensionH()) movingUp = true;
 

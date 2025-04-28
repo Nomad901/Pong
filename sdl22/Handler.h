@@ -5,6 +5,8 @@
 #include <vector>
 #include <utility>
 #include <filesystem>
+#include <chrono>
+#include <thread>
 
 #include <SDL.h>
 
@@ -13,6 +15,7 @@
 #include "App.h"
 #include "Sounds.h"
 #include "ActionsWithRectangle.h"
+#include "instructions.h"
 
 #define PATH std::filesystem
 
@@ -34,9 +37,11 @@ private:
 	App* nsApp;
 	std::unique_ptr<FactoryOfRect> nsGameZone, nsFirstRect, nsSecondRect, nsCircle;
 	std::unique_ptr<Sounds> nsSounds;
-	std::vector<std::unique_ptr<FactoryOfFront>> nsFonts;
-	std::array<std::unique_ptr<FactoryOfRect>, 3> nsEmptyEntities;
+	std::array<std::unique_ptr<FactoryOfFront>, 5> nsFonts;
+	std::array<std::unique_ptr<FactoryOfRect>, 5> nsEmptyEntities;
 	ActionsWithRectangle nsActions;
+	Instructions nsInstructions;
+	Sounds sounds;
 
 	PATH::path relPathForFonts;
 
@@ -51,7 +56,11 @@ private:
 	int scoreForSpeed{ 0 };
 	
 	int counterTimes{ 0 };
-	
-	bool play{ 0 };
+
+	int counterForTimer{ 3 };
+
+	bool play{ false };
+	bool anotherWindow{ false };
+	bool glow{ true };
 };
 

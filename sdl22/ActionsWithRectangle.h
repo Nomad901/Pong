@@ -17,7 +17,7 @@ public:
 	SDL_bool isColliding(SDL_Rect pFromRect, SDL_Rect pToRect);
 	void movingCircle(SDL_Renderer* pRenderer, FactoryOfRect& pCircle,
 					  FactoryOfRect& pGameZone, bool& movingUp, bool& movingRight,
-					  bool& isPlaying, int& pSpeedOfBall);		
+					  bool& isPlaying, int& pSpeedOfBall, bool glow);
 
 	void setPosX(int pPosX) { m_posX = pPosX; }
 	void setPosY(int pPosY) { m_posY = pPosY; }
