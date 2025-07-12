@@ -24,6 +24,16 @@ void Sounds::setVolumeMusic(int pVolume)
 	Mix_VolumeMusic(pVolume);
 }
 
+void Sounds::appendMusic(const std::filesystem::path& pPath)
+{
+	m_Music = Mix_LoadMUS(pPath.string().c_str());
+}
+
+void Sounds::appendSound(const std::filesystem::path& pPath)
+{
+	m_Chunk = Mix_LoadWAV(pPath.string().c_str());
+}
+
 void Sounds::playMusic()
 {
 	Mix_PlayMusic(m_Music, -1);

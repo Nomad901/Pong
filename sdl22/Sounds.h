@@ -3,15 +3,20 @@
 #include <string>
 #include <SDL.h>
 #include <SDL_mixer.h>
+#include <filesystem>
 
 class Sounds
 {
 public:
+	Sounds() = default;
 	Sounds(std::string pPathMusic, std::string pPathSound);
 	~Sounds();
 
 	void setVolumeSound(int pVolume);
 	void setVolumeMusic(int pVolume);
+
+	void appendMusic(const std::filesystem::path& pPath);
+	void appendSound(const std::filesystem::path& pPath);
 
 	void playMusic();
 	void playChunk();

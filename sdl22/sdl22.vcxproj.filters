@@ -57,6 +57,9 @@
     <ClCompile Include="Handler.cpp">
       <Filter>Source Files\Basic</Filter>
     </ClCompile>
+    <ClCompile Include="Instructions.cpp">
+      <Filter>Source Files\Basic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files\Basic</Filter>
     </ClInclude>
     <ClInclude Include="Handler.h">
+      <Filter>Header Files\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Instructions.h">
       <Filter>Header Files\Basic</Filter>
     </ClInclude>
   </ItemGroup>
